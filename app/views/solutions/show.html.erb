@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @solution.user_id %>
+</p>
+
+<p>
+  <b>Challenge:</b>
+  <%= @solution.challenge_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @solution.description %>
+</p>
+
+<p>
+  <b>Accepted:</b>
+  <%= @solution.accepted %>
+</p>
+
+
+<%= link_to 'Edit', edit_solution_path(@solution) %> |
+<%= link_to 'Back', solutions_path %>

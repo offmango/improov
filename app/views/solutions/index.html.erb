@@ -1,0 +1,29 @@
+<h1>Listing solutions</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Challenge</th>
+    <th>Description</th>
+    <th>Accepted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @solutions.each do |solution| %>
+  <tr>
+    <td><%= solution.user_id %></td>
+    <td><%= solution.challenge_id %></td>
+    <td><%= solution.description %></td>
+    <td><%= solution.accepted %></td>
+    <td><%= link_to 'Show', solution %></td>
+    <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
+    <td><%= link_to 'Destroy', solution, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Solution', new_solution_path %>

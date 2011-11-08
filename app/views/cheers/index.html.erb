@@ -1,0 +1,31 @@
+<h1>Listing cheers</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Challenge</th>
+    <th>Suggestion</th>
+    <th>Response</th>
+    <th>Solution</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cheers.each do |cheer| %>
+  <tr>
+    <td><%= cheer.user_id %></td>
+    <td><%= cheer.challenge_id %></td>
+    <td><%= cheer.suggestion_id %></td>
+    <td><%= cheer.response_id %></td>
+    <td><%= cheer.solution_id %></td>
+    <td><%= link_to 'Show', cheer %></td>
+    <td><%= link_to 'Edit', edit_cheer_path(cheer) %></td>
+    <td><%= link_to 'Destroy', cheer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cheer', new_cheer_path %>
