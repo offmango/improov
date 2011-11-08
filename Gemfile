@@ -32,6 +32,12 @@ gem 'jquery-rails'
 
 gem 'sorcery'
 gem 'paperclip'
+gem 'heroku'
+
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
 
 group :test do
   # Pretty printed test output
